@@ -1,0 +1,42 @@
+
+<h3>Gerenciador de usuários</h3>
+
+<hr>
+<a href="/usuario/registro" class="float-right">
+    <button class="btn btn-info mb-3">Criar Usuário</button>
+</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+            <th scope="col">Nome</th>
+            <th scope="col">Usuário</th>
+            <th scope="col">Nível</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each usuario}}
+        <tr>
+            <td>{{nome}}</td>
+            <td>{{usuario}}</td>
+            {{#if ehAdm}}
+            <td>Administrador</td>
+            {{else}}
+            <td>Comum</td>
+            {{/if}}
+            <td class="form-inline">
+                <a href="/usuario/trocasenha/{{_id}}">
+                    <button class="btn btn-primary">Alterar Senha</button>
+                </a>
+                <a href="/usuario/confirmaDel/{{_id}}">
+                    <button class="btn btn-danger ml-2">Deletar</button>
+                </a>
+            </td>
+        </tr>
+        {{else}}
+        <h4>Nenhum usuário encontrado.</h4>
+
+        {{/each}}
+    </tbody>
+</table>

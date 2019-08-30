@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/painel">
+    São Judas Informa
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    {{#if user}}
+    <li class="nav-item">
+        <a class="nav-link" href="/painel">Painéis</a>
+    </li>
+    {{/if}}
+    {{#if user.ehAdm}}
+      <li class="nav-item">
+        <a class="nav-link" href="/usuario">Usuários</a>
+      </li>
+    {{/if}}
+    </ul>
+    {{#if user}}
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/usuario/logout">Logout</a>
+      </li>
+    </ul>
+    {{else}}
+    {{/if}}
+
+  </div>
+</nav>

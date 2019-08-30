@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'graviola_softregular';
+    src: url('fonts/graviola_soft_regular-webfont.woff2') format('woff2'),
+        url('fonts/graviola_soft_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OCR-A BT';
+    src: url('fonts/OCR-a.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    
+    height: 100vw;
+    width: 98%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+}
+
+.climatempo {
+    width: 20%;
+    
+    margin-right: 10px;
+    margin-bottom: -10px;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.titulo {
+    width: 56%;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0px 110px;
+    color: white;
+
+}
+
+
+.horario {
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'OCR-A BT', monospace;
+    font-weight: normal;
+    border: solid 0.1px white;
+
+    margin-left: 10px;
+}
+
+.container {
+    display: inline-block;
+    
+    max-height: 100%;
+    width: 100%;
+    margin: 0px;
+
+}
+
+.topo {
+    max-height: 20%;
+}
+
+.content-painel {
+    
+    min-height: 35vw;
+    max-height: 80%;
+}
+
+.conteudo {
+
+    width: 32%;
+    height: 100%;
+    display: inline-block;
+    margin: 0.5vw 0.333vw;
+    margin-right: 5px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+
+}
+
+.conteudo-alerta {
+    min-height: 30%;
+    max-height: 100%;
+    color: white;
+    margin: 0.5vw 0.333vw;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+
+}
+
+section {
+    margin: 2em 0;
+
+}
+.texto-interno {
+    font-family: 'graviola_softregular', Verdana;
+    color: #000000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    word-wrap: break-word;
+    overflow: hidden;
+
+}
+
+.div-texto {
+    font-family: 'graviola_softregular', Verdana;
+    color: #000000;
+    position: relative;
+    width: 85%;
+    height: 25vw;
+    
+    word-wrap: break-word;
+    position: absolute;
+    top: 20%;
+    left: 9%;
+    text-align: left;
+    overflow: hidden;
+}
+
+
+
+.div-texto-alerta {
+    position: relative;
+    margin-top: -9vw;
+    text-align: left;
+    font-family: 'graviola_softregular', Verdana;
+    margin-left: 3vw;
+    color: #FFFFFF;
+    bottom: 1vw;
+    width: 90%;
+    height: 70%;
+    
+}
+
+.div-texto-alerta p {
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+}
+
+
+
+
+.hg-weather {
+    font-family: 'graviola_softregular', Verdana;
+    display: inline-block;
+    font-size: 2vw;
+    
+}
+
+.hg-weather.clear_day {
+    background-color: #FFF;
+    color: black;
+}
+
+.hg-weather.clear_night {
+    background-color: #FFF;
+    color: black;
+}
+
+.hg-weather.cloudly_day,
+.hg-weather.fog,
+.hg-weather.rain,
+.hg-weather.storm {
+    background-color: #FFF;
+    color: black;
+}
+
+.hg-weather.cloudly_night {
+    background-color: #FFF;
+    color: white;
+    color: black;
+}

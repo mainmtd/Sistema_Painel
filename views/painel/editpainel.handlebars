@@ -1,0 +1,27 @@
+<h2>Editar painel: {{painel.nome}}</h2>
+<hr>
+<form action="/painel/edit" method="POST">
+    <div class="form-row align-items-center">
+        <div class="container">
+            <div class="form-group col-auto">
+                <input type="hidden" name="id" value="{{painel._id}}">
+                <textarea class="form-control texto-postagem" name="conteudo" id="txa-postagem">{{{painel.conteudo}}}</textarea>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary btnconfirmar" >Confirmar</button>
+                </div>
+            </div>
+        </div>
+        {{#if painel.ehAlerta}}
+            <div class="container">
+                <input id="chkalerta" type="checkbox" value="true" name="alerta" {{#if painel.alerta}}checked{{/if}}>
+                <label for = "chkalerta"> Ativa alerta? </label>
+            </div>
+        {{/if}}
+    </div>
+    
+</form>
+
+<script src="/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('txa-postagem');
+</script>

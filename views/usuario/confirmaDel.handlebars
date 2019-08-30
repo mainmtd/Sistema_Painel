@@ -1,0 +1,12 @@
+<h3>Confirma exclusão do usuário {{usuario.nome}}?</h3>
+<div class="form-inline">
+    <form action="/usuario/delete" method="POST">
+        <input type="hidden" name="id" value="{{usuario._id}}">
+        <button type="submit" class="btn btn-success ">Confirma</button>
+
+    </form>
+    <a href="/usuario/">
+        <button class="btn btn-info ml-2">Voltar</button>
+    </a>
+
+</div>

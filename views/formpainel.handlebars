@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/form.css"> 
+</head>
+<form action="/add" method="POST">
+    <div class="form-row align-items-center">
+        <div class="container">
+            <div class="form-group col-auto">
+                <label for="txa-postagem">Postagem</label>
+                <textarea class="form-control texto-postagem" name="postagem" id="txa-postagem" rows="6" maxlength="610"></textarea>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary btnconfirmar" >Confirmar</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</form>
+
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('txa-postagem');
+</script>
+

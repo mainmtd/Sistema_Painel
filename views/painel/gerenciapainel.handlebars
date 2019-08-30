@@ -1,0 +1,42 @@
+<h2>Gerenciador de Painel: São Judas Informa</h2>
+<hr>
+<div class="row">
+    <a href="/">
+        <button class="btn btn-info mt-4 float-right">Visualizar Painel</button>
+    </a>
+    <button id="btnUpdate" class="btn btn-primary mt-4 ml-2 float-right">Atualizar painéis</button>
+</div>
+
+
+{{#each painel}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h4>{{nome}}</h4>
+        <div class="card mt-4 mb-4">
+            <div class="card-body">
+                <h6> Conteúdo: </h6>
+                {{{conteudo}}}
+            </div>
+        </div>
+        <small><b>Alterado em:</b> {{data_alteracao}}</small><br>
+        {{#if alerta }}
+            <div class="alert alert-danger mt-4">O alerta está ativado!</div>
+        {{/if}} 
+            <a href="/painel/edit/{{_id}}">
+                <button class="btn btn-info mt-4 float-right">Editar</button>
+            </a>
+           
+    </div>
+</div>
+{{else}}
+
+{{/each}}
+
+<script type="text/javascript">
+    var socket = io('http://localhost/');
+
+    $('#btnUpdate').click(() => {
+        socket.emit("atualizaPaineis");
+    })
+    
+</script>
